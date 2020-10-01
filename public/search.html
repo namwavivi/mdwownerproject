@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+   
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Middleware Project Owner</title>
+  </head>
+  <body>
+    <div class="nav-container">
+        <div class="wrapper">
+            <nav>
+                <div class="logo">
+                    VIVI
+                </div>
+
+                <ul class="nav-items">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About us</a>
+                    </li>
+                    <li>
+                        <a href="#">Search</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="nav-search">
+        <div class="inputsearch-box">
+            <input type="text" placeholder="Search...">
+        </div>
+        <div classs="search-bt">
+            <a href="#">
+                Search
+            </a>
+        </div>
+    </div>
+
+    <div class="nav-bodysearch">
+        <div classs="adddata-bt">
+            <a href="#">
+                Add Data
+            </a>
+        </div>
+
+    </div>
+    <div class="tabledata">
+        <div id="buttondiv">
+            <input type="file" id="inputfile" />
+            <input type="button" id="viewfile" value="Import file" />
+            <br><br>
+        </div>
+        <div class="table-container">
+            <table class="gridtable" id="tableMain">
+                <thead>
+                    <tr class="tableheader">
+                        <th>App ID</th>
+                        <th>App Acronym</th>
+                        <th>App Name</th>
+                        <th>Primary</th>
+                        <th>Second</th>
+                        <th>Software</th>
+                        <th>Go-Live date</th>
+                        <th>Tier</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>  
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+         $( document ).ready(function() {
+
+$('#viewfile').click(function () {
+    var rdr = new FileReader();
+    rdr.onload = function (e) {
+      //get the rows into an array
+      var therows = e.target.result.split("\n");
+      //loop through the rows
+      for (var row = 0; row < therows.length; row  ) {
+        //build a new table row
+        var newrow = "";
+        //get the columns into an array
+        var columns = therows[row].split(",");
+        //get number of columns
+        var colcount=columns.length;
+        
+        $('#tableMain').append(newrow);						
+      }
+    }
+    rdr.readAsText($("#inputfile")[0].files[0]);
+});
+});
+
+    </script>
+  </body>
+</html>
