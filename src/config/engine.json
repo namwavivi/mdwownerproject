@@ -1,0 +1,26 @@
+{
+    "engineName": "mdw-project-owner",
+    "hostIdentifier": "host-osvhw6",
+    "endpointBase": "http://172.30.17.147:443",
+    "searchKey": "search-v88pufi6hxq85fu7245hh5ci",
+    "resultFields": [
+      "app_name",
+      "note",
+      "software",
+      "tier",
+      "app_acronym",
+      "go_live_date",
+      "app_id",
+      "primary",
+      "second",
+      "id"
+    ],
+    "sortFields": [
+      "app_id"
+    ],
+    "facets": [
+      "app_name"
+    ],
+    "titleField": "app_id"
+  }
+  

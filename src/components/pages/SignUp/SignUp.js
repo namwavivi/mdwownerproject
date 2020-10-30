@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import HeroSection from '../../HeroSection';
-import { homeObjOne, homeObjTwo, homeObjThree, homeObjFour } from './Data';
 
 class SignUpForm extends Component {
   constructor() {

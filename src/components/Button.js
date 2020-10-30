@@ -24,6 +24,7 @@ export const Button = ({
     const checkButtonColor = COLOR.includes(buttonColor) ? 
     buttonColor : COLOR[null];
 
+    console.log('Button DOM');
     return (
     <button className={`btn ${checkButtonStyle} ${checkButtonSize} ${checkButtonColor}`} onClick={onClick} type={type}> {children} </button>
     )

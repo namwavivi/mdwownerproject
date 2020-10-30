@@ -1,28 +1,31 @@
 import React from 'react';
-import './Footer.css';
+import './SearchBox.css';
 import { Button } from '../../Button';
 import { Link } from 'react-router-dom';
 
-function Footer() {
+function SearchBox() {
   return (
-    <div className='footer-container'>
-      <section className='footer-subscription'>
-        <p className='footer-subscription-heading'>
+    <div className='searchbox-container'>
+      <section className='searchbox-subscription'>
+        <p className='searchbox-subscription-heading'>
           LETS SEARCH !!
         </p>
-        <p className='footer-subscription-text'>
+        <p className='search-subscription-text'>
           You can search anything you want here.
         </p>
         <div className='input-areas'>
           <form>
             <input
-              className='footer-input'
+              className='searchbox-input'
               name='wordsearch'
               type='text'
               placeholder='Search ... '
             />
             <Button buttonStyle='btn--outline'>SEARCH</Button>
-          </form>                 
+          </form> 
+          <Link to='/AddData'>
+        <Button buttonSize='btn--medium' buttonColor='green'>ADD DATA</Button>
+      </Link>                
           
         </div>
       </section>
@@ -30,4 +33,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default SearchBox;
